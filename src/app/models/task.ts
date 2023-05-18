@@ -1,6 +1,7 @@
 import {Time} from "@angular/common";
 
 class Task {
+  id: number;
   name: string;
   description: string;
   priority: number;
@@ -13,7 +14,8 @@ class Task {
   user?: User;
 
 
-  constructor(name: string, description: string, priority: number, functionality: Functionality, time: Time, state: States) {
+  constructor(id: number, name: string, description: string, priority: number, functionality: Functionality, time: Time, state: States) {
+    this.id = id;
     this.name = name;
     this.description = description;
     this.priority = priority;
@@ -22,4 +24,5 @@ class Task {
     this.state = state;
     this.addDate = Date.now().toString();
   }
+
 }

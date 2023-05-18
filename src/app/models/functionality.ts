@@ -1,4 +1,5 @@
 class Functionality {
+  id: number;
   name: string;
   description: string;
   priority: number;
@@ -6,7 +7,8 @@ class Functionality {
   owner: any | string;
   state: States;
 
-  constructor(name: string, description: string, priority: number, project: Project, owner: any, state: States) {
+  constructor(id:number, name: string, description: string, priority: number, project: Project, owner: any, state: States) {
+    this.id = id;
     this.name = name;
     this.description = description;
     this.priority = priority;
