@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ContextServiceService} from "../../services/context-service.service";
+import {Project} from "../../models/project";
+import {Functionality} from "../../models/functionality";
+import {States} from "../../models/states";
+import {Clasyfications} from "../../logic/Clasyfications";
 
 @Component({
   selector: 'app-context',
@@ -6,5 +11,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./context.component.scss']
 })
 export class ContextComponent {
+  ContextService : ContextServiceService = new ContextServiceService()
+    .addToContext(new Project(0,"",""))
+    .addToContext(new Functionality(1,"","",2,new Project(0,"",""),"",States.TODO));
+
+  classes : Clasyfications = this.ContextService.mainInContextType();
 
 }
