@@ -1,4 +1,7 @@
-class Functionality {
+import {Project} from "./project";
+import {States} from "./states";
+
+export class Functionality {
   id: number;
   name: string;
   description: string;

@@ -1,6 +1,9 @@
 import {Time} from "@angular/common";
+import {Functionality} from "./functionality";
+import {States} from "./states";
+import {User} from "./user";
 
-class Task {
+export class Task {
   id: number;
   name: string;
   description: string;

@@ -1,3 +1,3 @@
-enum Privilages {
+export enum Privilages {
   ADMIN,DEVOPS,DEVELOPER
 }

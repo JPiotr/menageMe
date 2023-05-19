@@ -1,4 +1,6 @@
-class User {
+import {Privilages} from "./privilages";
+
+export class User {
   id: number;
   login: string;
   private password: string;
