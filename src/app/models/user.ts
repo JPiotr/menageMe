@@ -6,7 +6,7 @@ export class User {
   private password: string;
   name: string;
   surname: string;
-  privilages: Privilages;
+  privileges: Privilages;
 
 
   constructor(id: number,login: string, password: string, name: string, surname: string, privilages: Privilages) {
@@ -15,6 +15,6 @@ export class User {
     this.password = password;
     this.name = name;
     this.surname = surname;
-    this.privilages = privilages;
+    this.privileges = privilages;
   }
 }
