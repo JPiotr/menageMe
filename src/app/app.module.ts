@@ -7,13 +7,19 @@ import { ProjectsListComponent } from './components/projects-list/projects-list.
 import { ProjectComponent } from './components/project/project.component';
 import {HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './components/header/header.component';
+import { ContextComponent } from './components/context/context.component';
+import { ActionsComponent } from './components/actions/actions.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsListComponent,
     ProjectComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContextComponent,
+    ActionsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
