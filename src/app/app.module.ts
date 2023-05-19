@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContextComponent } from './components/context/context.component';
 import { ActionsComponent } from './components/actions/actions.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectElementComponent } from './components/project-element/project-element.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     ContextComponent,
     ActionsComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectElementComponent
   ],
   imports: [
     BrowserModule,
