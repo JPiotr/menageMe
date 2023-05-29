@@ -5,7 +5,7 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class DbServiceService {
+export class DbService {
   private source: string = "http://localhost:3000/";
   constructor(private _httpClient: HttpClient) {
 
@@ -16,4 +16,8 @@ export class DbServiceService {
     return this._httpClient.post(link,data);
   }
 
+  getAllData(table: string) : Observable<any>{
+    let link = this.source + table;
+    return this._httpClient.get(link);
+  }
 }
