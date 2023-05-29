@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NewComponent } from './components/actions/buttons/new/new.component';
 import { EditComponent } from './components/actions/buttons/edit/edit.component';
 import { DeleteComponent } from './components/actions/buttons/delete/delete.component';
+import { ListComponent } from './components/context/list/list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DeleteComponent } from './components/actions/buttons/delete/delete.comp
     ButtonComponent,
     NewComponent,
     EditComponent,
-    DeleteComponent
+    DeleteComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
