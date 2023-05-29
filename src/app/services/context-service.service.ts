@@ -8,9 +8,16 @@ import {Functionality} from "../models/functionality";
 @Injectable({
   providedIn: 'root'
 })
-export class ContextServiceService {
+export class ContextService {
   private data : any[] = [];
-  constructor() { }
+  private static instance : ContextService;
+  private constructor() { }
+  public static getInstance(){
+    if(!ContextService.instance){
+      ContextService.instance = new ContextService();
+    }
+    return ContextService.instance;
+  }
 
   public mainInContextType() : Clasyfications{
     if(this.data.length != 0){
@@ -29,13 +36,20 @@ export class ContextServiceService {
     return this.data[this.data.length];
   }
 
-  public addToContext(data: any) : ContextServiceService{
+  public getParentOfContextData() : any{
+    if(this.data.length > 1){
+      return this.data[this.data.length - 1];
+    }
+    return this.mainInContext();
+  }
+
+  public addToContext(data: any) : ContextService{
     console.log(data.constructor.name);
     this.data.push(data);
     return this;
   }
 
-  public getBackInContext() : ContextServiceService{
+  public getBackInContext() : ContextService{
     if(this.data.length != 0){
       this.data.pop();
     }
