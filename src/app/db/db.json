@@ -1,6 +1,10 @@
 {
   "project": [
-
+    {
+      "id" : 1,
+      "name" : "Projekt 1",
+      "description" : "Projekt testowy"
+    }
   ],
   "functionality": [
 
