@@ -1,0 +1,18 @@
+:host{
+  display: grid;
+  place-self: stretch;
+  grid-template-columns: 0.3fr 0.6fr 1.5fr 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  border-radius: 0.3em;
+  box-shadow: 0px 10px 14px -7px  rgba(14, 14, 14, 1);
+  font-size: xx-large;
+  text-align: center;
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 1px;
+}

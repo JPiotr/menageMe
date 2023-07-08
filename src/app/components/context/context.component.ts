@@ -12,9 +12,10 @@ import {Clasyfications} from "../../logic/Clasyfications";
 })
 export class ContextComponent {
   ContextService : ContextService = ContextService.getInstance()
-    .addToContext(new Project(0,"",""))
-    .addToContext(new Functionality(1,"","",2,new Project(0,"",""),"",States.TODO));
+    // .addToContext(new Project(0,"",""))
+    // .addToContext(new Functionality(1,"","",2,new Project(0,"",""),"",States.TODO));
 
   classes : Clasyfications = this.ContextService.mainInContextType();
+
 
 }

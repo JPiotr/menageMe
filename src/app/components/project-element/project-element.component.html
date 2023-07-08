@@ -1,3 +1,10 @@
-<div>
-
-</div>
+<ng-container *ngIf="project.id == 0">
+  <input type="checkbox" disabled>
+  <div><span>Id</span></div>
+</ng-container>
+<ng-container *ngIf="project.id != 0">
+  <input type="checkbox" (click)="changeState()">
+  <div><span>{{project.id}}</span></div>
+</ng-container>
+<div><span>{{project.name}}</span></div>
+<div><span>{{project.description}}</span></div>

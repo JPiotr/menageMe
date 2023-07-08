@@ -1,1 +1,14 @@
-<p>list works!</p>
+<ng-content></ng-content>
+<ng-container *ngIf="classes == 0">
+  <app-project-element [project]="header"></app-project-element>
+  <ng-container *ngFor="let proj of data">
+    <app-project-element [class]="" [project]="proj" (selectedAction)="onSelectedProject($event)" [style]=""></app-project-element>
+  </ng-container>
+</ng-container>
+<ng-container *ngIf="classes == 1">
+  <p>Project</p>
+</ng-container>
+<ng-container *ngIf="classes == 2">
+  <p>Functionality</p>
+</ng-container>
+
